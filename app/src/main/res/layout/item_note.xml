@@ -27,8 +27,11 @@
                 android:layout_height="70dp"
                 android:maxLines="1"
                 android:text="@{note.title}"
+                android:gravity="center_vertical"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ibtnDeleteItmn"
+                app:layout_constraintBottom_toTopOf="@id/cbCompleteItmn"/>
 
             <CheckBox
                 android:id="@+id/cbCompleteItmn"
@@ -38,14 +41,16 @@
                 android:checked="@{note.complete}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTitleItmn"
+
 
                 />
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/ibtnDeleteItmn"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:padding="10dp"
+                android:background="@null"
                 android:src="@android:drawable/ic_menu_delete"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

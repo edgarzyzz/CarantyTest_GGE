@@ -4,5 +4,6 @@ import com.gogaedd.carantytest_gge.model.Note
 
 interface NoteListener {
     fun onEditNote(note:Note)
-    fun onDeleteNote(note: Note)
+    fun onDeleteNote(note: Note, adapterPosition: Int)
+    fun onNoteChanged(note: Note)
 }

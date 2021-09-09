@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.gogaedd.carantytest_gge.ui.fragment.NotesFragment"
+        tools:layout="@layout/fragment_notes"
+        android:label="NotesFragment" >
+        <action
+            android:id="@+id/action_goFormNoteFragment"
+            app:destination="@id/formNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formNoteFragment"
+        android:name="com.gogaedd.carantytest_gge.ui.fragment.FormNoteFragment"
+        android:label="FormNoteFragment"
+        tools:layout="@layout/fragment_form_note">
+        <action
+            android:id="@+id/action_goNotesFragment"
+            app:destination="@id/notesFragment" />
+        <argument
+            android:name="note"
+            app:argType="com.gogaedd.carantytest_gge.model.Note"
+            app:nullable="true" />
+    </fragment>
+</navigation>
